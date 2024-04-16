@@ -24,6 +24,9 @@ steps:
     arguments: '--no-restore --configuration $(buildConfiguration)'
     projects: '**/*.csproj'
 
+- task: MicrosoftSecurityDevOps@1
+  displayName: 'Microsoft Security DevOps'
+
 - task: DotNetCoreCLI@2
   displayName: 'Pack the project - $(buildConfiguration)'
   inputs:
@@ -43,6 +46,4 @@ steps:
     allowPackageConflicts: true
   condition: succeeded()
 
-- task: MicrosoftSecurityDevOps@1
-  displayName: 'Microsoft Security DevOps'
 
