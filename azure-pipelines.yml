@@ -42,3 +42,7 @@ steps:
     feedPublish: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models'
     allowPackageConflicts: true
   condition: succeeded()
+
+- task: MicrosoftSecurityDevOps@1
+  displayName: 'Microsoft Security DevOps'
+
